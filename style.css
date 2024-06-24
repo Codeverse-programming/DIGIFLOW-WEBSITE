@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Outfit", sans-serif;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+header {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em 5em;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.other {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+ul li a {
+    color: grey;
+    font-weight: 600;
+}
+
+
+ul li a:hover {
+    color: black;
+}
+
+.other .button a button {
+    background-color: #C0E500;
+    padding: 1em 3em;
+    border-radius: 5px;
+    border: 0;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    margin-top: 10em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 5em;
+}
+
+.text-1 h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.text-2 p {
+    font-size: 1.1rem;
+    padding-bottom: 2em;
+    color: grey;
+    font-weight: 600;
+}
+
+.works {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+.works .hire a button {
+    background-color: #C0E500;
+    padding: 1em 3em;
+    border-radius: 5px;
+    border: 0;
+    font-weight: 600;
+}
+
+.works .explore-button a button {
+    background-color: gainsboro;
+    padding: 1em 3em;
+    border-radius: 5px;
+    border: 0;
+    font-weight: 600;
+}
+
+.flex-images {
+    display: flex;
+    gap: 2em;
+}
+
+.img-1 img {
+    width: 100%;
+}
+
+/* EXPLORE SECTION */
+.explore {
+    margin-top: 7em;
+}
+
+.padding-container {
+    padding: 1em 5em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+}
+
+.text img {
+    width: 100%;
+}
+
+.text {
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 1em;
+    line-height: 2;
+}
+
+.text h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.heading h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin: 0.4em 0;
+}
+
+.heading button {
+    border-radius: 25px;
+    padding: 0.5em;
+    color: grey;
+    background-color: transparent;
+    border: 1px solid black;
+}
+
+.view {
+    text-align: center;
+    width: fit-content;
+    margin: 3em auto 0;
+}
+
+.view a button {
+    background-color: #C0E500;
+    padding: 1em 3em;
+    border-radius: 5px;
+    border: 0;
+    font-weight: 600;
+}
+
+/* SERVICES SECTION */
+
+.web-design {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    color: grey;
+}
+
+.web-design p {}
+
+.main-services {
+    margin-top: 3em;
+}
+
+.web-text {
+    display: flex;
+    gap: 3em;
+}
+
+.see-button {
+    display: none;
+}
+
+.icon {
+    display: block;
+}
+
+.bars {
+    display: none;
+}
+
+@media only screen and (max-width:992px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: unset;
+        padding: 1em 2em;
+    }
+
+    header {
+        padding: 1em 2em;
+    }
+
+    .text-1 h1 br {
+        display: none;
+    }
+
+    .text-2 p {
+        padding-top: 2em;
+    }
+
+    .text-2 p br {
+        display: none;
+    }
+
+    .padding-container {
+        padding: 1em 2em;
+    }
+
+    .web-design {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .see-button {
+        display: block;
+    }
+
+    .see-button button {
+        background-color: #C0E500;
+        color: white;
+        font-weight: 600;
+        padding: 1em 2em;
+        border: 0;
+        border-radius: 5px;
+    }
+
+    .web-paragraph p br {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav {
+        background-color: transparent;
+        position: fixed;
+        z-index: -1;
+        top: 4em;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0%;
+        padding: 2em 0 0 2em;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bars {
+        display: block;
+    }
+
+    header #show-bars:checked~nav {
+        height: 100%;
+        background-color: gainsboro;
+    }
+
+}
+
+@media only screen and (max-width:414px) {
+    .hero-section {
+        margin-top: 6em;
+    }
+
+    .text-1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-2 p {
+        font-size: 0.8rem;
+    }
+
+    .works .hire a button {
+        padding: 1em 2em;
+    }
+
+    .flex-images {
+        flex-direction: column;
+    }
+    header{
+        padding: 1em;
+    }
+    .logo img{
+        width: 90px;
+    }
+    .padding-container{
+        padding: 1em;
+    }
+    .heading h1{
+        font-size: 2rem;
+    }
+    .text h1{
+        font-size: 1.5rem;
+    }
+    .text p{
+        font-size: 0.7rem;
+    }
+    .explore {
+        margin-top: 1em;
+    }
+    .flex-container{
+        padding: 1em;
+    }
+}
